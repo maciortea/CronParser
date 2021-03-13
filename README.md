@@ -1,9 +1,13 @@
 ## Cron expression parser
-This project is a command line tool, implemented in C# and built with Microsoft Visual Studio environment.
+This project is a command line tool, which parses a `cron` string and expands each field to show the times at which it will run.
 
-### How to run:
-- Download binaries from https://drive.google.com/file/d/11QyrfY5NYvm550orA0iqx4HnmHgga_cX/view?usp=sharing
-- Unzip downloaded file
-- Open a terminal window
-- Navigate to the downloaded folder and change current directory that corresponds to your platform (Windows, macOS, Linux). Following are available: **linux, linux-64, osx, osx-64, win, win-64**
-- Type: ```CronParser */15 0 1,15 * 1-5 /usr/bin/find```
+### Example
+For the following input argument `*/15 0 1,15 * 1-5 /usr/bin/find` the program will output to console:
+```
+minute 0 15 30 45
+hour 0
+day of month 1 15
+month 1 2 3 4 5 6 7 8 9 10 11 12
+day of week 1 2 3 4 5
+command /usr/bin/find
+```
