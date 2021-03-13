@@ -1,6 +1,8 @@
 ## Cron expression parser
 This project is a command line tool, which parses a `cron` string and expands each field to show the times at which it will run.
 
+This program is a good example of using **Interpreter** design pattern and illustrates how to implement it.
+
 ### Example
 For the following input argument `*/15 0 1,15 * 1-5 /usr/bin/find` the program will output to console:
 ```
